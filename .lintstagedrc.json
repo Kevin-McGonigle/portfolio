@@ -1,0 +1,7 @@
+{
+  "**/*.{astro,cjs,cts,js,jsx,mdx,mjs,mts,ts,tsx}": [
+    "eslint --fix",
+    "prettier --write"
+  ],
+  "***/*.{css,html,json,md,mjs,mts,ts,tsx}": "prettier --write"
+}

@@ -1,0 +1,12 @@
+{
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-astro"],
+  "semi": false
+}
