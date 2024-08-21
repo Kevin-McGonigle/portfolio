@@ -1,0 +1,36 @@
+---
+import {
+  Breadcrumb as BreadcrumbContainer,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+
+const { className } = Astro.props
+
+const crumbs = ["", ...Astro.url.pathname.split("/").filter(Boolean)]
+
+let page = crumbs.pop() || "home"
+---
+
+<BreadcrumbContainer className={className}>
+  <BreadcrumbList>
+    {
+      crumbs.map((crumb) => (
+        <>
+          <BreadcrumbItem>
+            <BreadcrumbLink className="capitalize" href={`/${crumb}`}>
+              {crumb || "home"}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+        </>
+      ))
+    }
+    <BreadcrumbItem>
+      <BreadcrumbPage className="capitalize">{page}</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</BreadcrumbContainer>

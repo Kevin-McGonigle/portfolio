@@ -1,17 +1,151 @@
 ---
-import SpeedInsights from "@vercel/speed-insights/astro"
+import Layout from "@/layouts/base.astro"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "../components/ui/table"
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Kevin McGonigle</title>
-  </head>
-  <body>
-    <h1>Kevin McGonigle</h1>
-    <SpeedInsights />
-  </body>
-</html>
+<Layout>
+  <h1 class="mb-16 text-4xl">Welcome to London, parents!</h1>
+  <p class="mb-4">
+    We've written this handy guide with all the helpful information we could
+    come up with to help you in your temporary zoo-keeping roles.
+  </p>
+  <p class="mb-12">
+    If you have any questions or concerns, don't hesitate to message or call
+    either of us. Please keep us posted (ideally with plenty of photos!) on how
+    you're all getting on ❤️.
+  </p>
+  <h2 class="mb-4 text-2xl">Information</h2>
+  <div class="flex gap-4 mb-12">
+    <a
+      class={cn(buttonVariants({ variant: "default" }), "flex-1")}
+      href="/area"
+    >
+      Area
+    </a><a
+      class={cn(buttonVariants({ variant: "default" }), "flex-1")}
+      href="/flat"
+    >
+      Flat
+    </a>
+    <a
+      class={cn(buttonVariants({ variant: "default" }), "flex-1")}
+      href="/pets"
+    >
+      Pets
+    </a>
+  </div>
+  <h2 class="mb-4 text-2xl">At a glance</h2>
+  <h3 class="mb-4 text-xl">Pets</h3>
+  <Table className="mb-8">
+    <TableHeader>
+      <TableRow>
+        <TableHead />
+        <TableHead>Dobby</TableHead>
+        <TableHead>Pickle</TableHead>
+        <TableHead>Sprout</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell>
+          <strong>Feeding</strong>
+        </TableCell>
+        <TableCell>
+          1 heaped scoop of kibble + 2 tablespoons of chicken & rice, 3 times a
+          day
+        </TableCell>
+        <TableCell> ⅔ scoop of kibble, once a day</TableCell>
+        <TableCell>
+          35g kibble + 1 small tablespoon of chicken & rice, 3 times a day
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>
+          <strong>Water</strong>
+        </TableCell>
+        <TableCell className="text-center" colSpan={3}>
+          Water bowls in sitting room and bedroom
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>
+          <strong>Treats</strong>
+        </TableCell>
+        <TableCell>1 Bonio (soaked)</TableCell>
+        <TableCell>4-5 Tasty Minis</TableCell>
+        <TableCell>5-6 Dreamies</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>
+          <strong>Medication</strong>
+        </TableCell>
+        <TableCell>1.5 Thyforon tablets, twice a day</TableCell>
+        <TableCell>❌</TableCell>
+        <TableCell>❌</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>
+          <strong>Litter box</strong>
+        </TableCell>
+        <TableCell>❌</TableCell>
+        <TableCell>❌</TableCell>
+        <TableCell>Empty twice a day</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+  <h3 class="mb-4 text-xl">Address</h3>
+  <p class="mb-12">
+    <a
+      class="underline"
+      href="https://maps.app.goo.gl/tMKRHAD59Stf8v376"
+      target="_blank"
+    >
+      Flat 307 Lime View Apartments, John Nash Mews, London, E14 7GQ
+    </a>
+  </p>
+  <h3 class="mb-4 text-xl">Access</h3>
+  <Table className="mb-8">
+    <TableHeader>
+      <TableRow>
+        <TableHead>Front Gate</TableHead>
+        <TableHead>Building Entrance</TableHead>
+        <TableHead>Flat</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell>Round grey & blue fob</TableCell>
+        <TableCell>Dark blue oblong fob</TableCell>
+        <TableCell>Round silver key</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+  <h3 class="mb-4 text-xl">Contacts</h3>
+  <Table className="mb-8">
+    <TableHeader>
+      <TableRow>
+        <TableHead>Contact</TableHead>
+        <TableHead>Number</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell>Vet</TableCell>
+        <TableCell><a href="tel:02089815535">020 8981 5535</a></TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>Emergency Vet</TableCell>
+        <TableCell><a href="tel:02089897744">020 8989 7744</a></TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+</Layout>
