@@ -1,8 +1,6 @@
 ---
 import SpeedInsights from "@vercel/speed-insights/astro"
-import "@fontsource-variable/outfit"
 import "@/styles/globals.css"
-import Breadcrumb from "@/components/breadcrumb.astro"
 ---
 
 <html class="dark:[color-scheme:dark]" lang="en">
@@ -11,12 +9,11 @@ import Breadcrumb from "@/components/breadcrumb.astro"
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Zookeeping Guide</title>
+    <title>Kevin McGonigle</title>
   </head>
-  <body>
+  <body class="bg-white text-primary dark:bg-primary dark:text-secondary">
     <!--<header></header>-->
-    <main class="max-w-screen-md my-16 px-8 mx-auto">
-      <Breadcrumb className="mb-8" />
+    <main class="max-w-screen-md my-32 px-8 mx-auto">
       <slot />
     </main>
     <!--<footer></footer>-->

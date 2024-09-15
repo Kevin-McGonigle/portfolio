@@ -18,8 +18,12 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      colors: {
+        primary: "#161620",
+        secondary: "#b0b0d0",
+      },
       fontFamily: {
-        sans: ["Outfit", ...defaultTheme.fontFamily.sans],
+        sans: ["Strawford", ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
