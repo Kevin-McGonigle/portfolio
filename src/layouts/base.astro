@@ -1,6 +1,8 @@
 ---
 import SpeedInsights from "@vercel/speed-insights/astro"
 import "@/styles/globals.css"
+
+const experience = new Date().getFullYear() - 2019
 ---
 
 <html class="dark:[color-scheme:dark]" lang="en">
@@ -10,6 +12,10 @@ import "@/styles/globals.css"
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Kevin McGonigle</title>
+    <meta
+      name="description"
+      content=`Kevin McGonigle. Professional builder of cool internet things for over ${experience} years. Recreational one for many more.`
+    />
   </head>
   <body class="bg-white text-primary dark:bg-primary dark:text-secondary">
     <!--<header></header>-->
