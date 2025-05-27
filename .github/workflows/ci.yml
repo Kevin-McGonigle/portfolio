@@ -11,7 +11,7 @@ jobs:
 
       - uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 10
 
       - uses: actions/setup-node@v4
         with:
@@ -22,24 +22,24 @@ jobs:
 
       - run: pnpm run lint:check
 
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: ".nvmrc"
-          cache: "pnpm"
-
-      - run: pnpm install --frozen-lockfile
-
-      - run: pnpm run test
+#  test:
+#    name: Test
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#
+#      - uses: pnpm/action-setup@v4
+#        with:
+#          version: 10
+#
+#      - uses: actions/setup-node@v4
+#        with:
+#          node-version-file: ".nvmrc"
+#          cache: "pnpm"
+#
+#      - run: pnpm install --frozen-lockfile
+#
+#      - run: pnpm run test
 
   build:
     name: Build

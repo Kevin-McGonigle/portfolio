@@ -7,7 +7,9 @@
     "build": "astro check && astro build",
     "dev": "astro dev",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "lint": "eslint --fix .",
+    "lint:check": "eslint .",
     "preview": "astro preview",
     "start": "astro dev"
   },
