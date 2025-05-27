@@ -1,15 +1,30 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+:root {
+  --background: oklch(1 0 0);
+  --primary: oklch(0.2 0.02 280);
+  --secondary: oklch(0.5 0.1 280);
+}
+
+.dark {
+  --background: oklch(0.2 0.02 280);
+  --primary: oklch(0.8 0.05 280);
+  --secondary: oklch(1 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+}
 
 @theme {
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
 
-  --color-primary: #161620;
-  --color-secondary: #b0b0d0;
-
   --font-sans:
-    Strawford, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    Strawford, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   @keyframes accordion-down {
     from {
@@ -55,4 +70,3 @@
   font-weight: 400;
   src: url("/fonts/strawford-regularitalic-webfont.woff2") format("woff2");
 }
-

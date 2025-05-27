@@ -4,13 +4,14 @@
     "components": "@/components",
     "utils": "@/lib/utils"
   },
+  "iconLibrary": "lucide",
   "rsc": false,
   "style": "default",
   "tailwind": {
-    "baseColor": "slate",
-    "config": "tailwind.config.mjs",
+    "baseColor": "neutral",
+    "config": "",
     "css": "./src/styles/globals.css",
-    "cssVariables": false,
+    "cssVariables": true,
     "prefix": ""
   },
   "tsx": true

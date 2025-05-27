@@ -7,6 +7,10 @@
       }
     }
   ],
-  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-astro"],
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss"
+  ],
   "semi": false
 }

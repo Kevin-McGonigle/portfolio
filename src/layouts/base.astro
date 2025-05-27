@@ -3,24 +3,31 @@ import Analytics from "@vercel/analytics/astro"
 import SpeedInsights from "@vercel/speed-insights/astro"
 import "@/styles/globals.css"
 
-const experience = new Date().getFullYear() - 2019
+type Props = {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
 ---
 
-<html class="dark:scheme-dark" lang="en">
+<script is:inline>
+  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+</script>
+
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Kevin McGonigle</title>
-    <meta
-      name="description"
-      content=`Kevin McGonigle. Professional builder of cool internet things for over ${experience} years. Recreational one for many more.`
-    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
   </head>
-  <body class="bg-white text-primary dark:bg-primary dark:text-secondary">
+  <body class="bg-background text-primary">
     <!--<header></header>-->
-    <main class="max-w-(--breakpoint-md) my-32 px-8 mx-auto">
+    <main class="mx-auto my-32 max-w-(--breakpoint-md) px-8">
       <slot />
     </main>
     <!--<footer></footer>-->
