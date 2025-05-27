@@ -1,4 +1,5 @@
 ---
+import Analytics from "@vercel/analytics/astro"
 import SpeedInsights from "@vercel/speed-insights/astro"
 import "@/styles/globals.css"
 
@@ -23,6 +24,7 @@ const experience = new Date().getFullYear() - 2019
       <slot />
     </main>
     <!--<footer></footer>-->
+    <Analytics />
     <SpeedInsights />
   </body>
 </html>
