@@ -13,7 +13,9 @@ import {
 ---
 
 <Layout base="/house-sitting" title="House Sitting">
-  <h1 class="text-secondary mb-16 text-4xl">Welcome to London, Parents!</h1>
+  <h1 class="dark:text-secondary mb-16 text-4xl">
+    Welcome to London, Parents!
+  </h1>
   <p class="mb-4">
     We've written this handy guide with all the helpful information we could
     come up with to help you in your temporary zoo-keeping roles.
@@ -23,8 +25,8 @@ import {
     either of us. Please keep us posted (ideally with plenty of photos!) on how
     you're all getting on ❤️.
   </p>
-  <h2 class="text-secondary mb-4 text-2xl">Information</h2>
-  <div class="mb-12 flex gap-4">
+  <h2 class="dark:text-secondary mb-4 text-2xl">Information</h2>
+  <div class="mb-12 flex flex-col gap-4 sm:flex-row">
     <a
       class={cn(buttonVariants({ variant: "default" }), "flex-1")}
       href="/house-sitting/area"
@@ -43,20 +45,20 @@ import {
       Pets
     </a>
   </div>
-  <h2 class="text-secondary mb-4 text-2xl">At a Glance</h2>
-  <h3 class="text-secondary mb-4 text-xl">Pets</h3>
+  <h2 class="dark:text-secondary mb-4 text-2xl">At a Glance</h2>
+  <h3 class="dark:text-secondary mb-4 text-xl">Pets</h3>
   <Table className="mb-8">
-    <TableHeader className="text-secondary">
+    <TableHeader>
       <TableRow>
         <TableHead />
-        <TableHead>Dobby</TableHead>
-        <TableHead>Pickle</TableHead>
-        <TableHead>Sprout</TableHead>
+        <TableHead className="dark:text-secondary">Dobby</TableHead>
+        <TableHead className="dark:text-secondary">Pickle</TableHead>
+        <TableHead className="dark:text-secondary">Sprout</TableHead>
       </TableRow>
     </TableHeader>
     <TableBody>
       <TableRow>
-        <TableCell className="text-secondary">
+        <TableCell className="dark:text-secondary">
           <strong>Feeding</strong>
         </TableCell>
         <TableCell className="whitespace-normal">
@@ -69,7 +71,7 @@ import {
         </TableCell>
       </TableRow>
       <TableRow>
-        <TableCell className="text-secondary">
+        <TableCell className="dark:text-secondary">
           <strong>Water</strong>
         </TableCell>
         <TableCell className="text-center" colSpan={3}>
@@ -77,15 +79,15 @@ import {
         </TableCell>
       </TableRow>
       <TableRow>
-        <TableCell className="text-secondary">
+        <TableCell className="dark:text-secondary">
           <strong>Treats</strong>
         </TableCell>
         <TableCell>1 Rich Tea</TableCell>
-        <TableCell>4-5 Tasty Minis</TableCell>
         <TableCell>5-6 Dreamies</TableCell>
+        <TableCell>4-5 Tasty Minis</TableCell>
       </TableRow>
       <TableRow>
-        <TableCell className="text-secondary">
+        <TableCell className="dark:text-secondary">
           <strong>Medication</strong>
         </TableCell>
         <TableCell className="whitespace-normal">
@@ -98,7 +100,7 @@ import {
         <TableCell>❌</TableCell>
       </TableRow>
       <TableRow>
-        <TableCell className="text-secondary">
+        <TableCell className="dark:text-secondary">
           <strong>Litter box</strong>
         </TableCell>
         <TableCell>❌</TableCell>
@@ -107,7 +109,7 @@ import {
       </TableRow>
     </TableBody>
   </Table>
-  <h3 class="text-secondary mb-4 text-xl">Address</h3>
+  <h3 class="dark:text-secondary mb-4 text-xl">Address</h3>
   <p class="mb-12">
     <a
       class="hover:text-secondary transition-colors duration-300 ease-in-out"
@@ -117,13 +119,13 @@ import {
       Flat 307 Lime View Apartments, John Nash Mews, London, E14 7GQ
     </a>
   </p>
-  <h3 class="text-secondary mb-4 text-xl">Access</h3>
+  <h3 class="dark:text-secondary mb-4 text-xl">Access</h3>
   <Table className="mb-8">
-    <TableHeader className="text-secondary">
+    <TableHeader>
       <TableRow>
-        <TableHead>Front Gate</TableHead>
-        <TableHead>Building Entrance</TableHead>
-        <TableHead>Flat</TableHead>
+        <TableHead className="dark:text-secondary">Front Gate</TableHead>
+        <TableHead className="dark:text-secondary">Building Entrance</TableHead>
+        <TableHead className="dark:text-secondary">Flat</TableHead>
       </TableRow>
     </TableHeader>
     <TableBody>
@@ -135,12 +137,12 @@ import {
       </TableRow>
     </TableBody>
   </Table>
-  <h3 class="text-secondary mb-4 text-xl">Contacts</h3>
+  <h3 class="dark:text-secondary mb-4 text-xl">Contacts</h3>
   <Table className="mb-8">
-    <TableHeader className="text-secondary">
+    <TableHeader>
       <TableRow>
-        <TableHead>Contact</TableHead>
-        <TableHead>Number</TableHead>
+        <TableHead className="dark:text-secondary">Contact</TableHead>
+        <TableHead className="dark:text-secondary">Number</TableHead>
       </TableRow>
     </TableHeader>
     <TableBody>

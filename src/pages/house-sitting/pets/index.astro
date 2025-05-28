@@ -13,23 +13,23 @@ import { cn } from "@/lib/utils"
 ---
 
 <Layout base="/house-sitting" title="Pets">
-  <h1 class="text-secondary mb-16 text-4xl">Pets</h1>
+  <h1 class="dark:text-secondary mb-16 text-4xl">Pets</h1>
   <p class="mb-8">
     Here's a breakdown of everything you need to know about the kiddos.
   </p>
-  <h2 class="text-secondary mb-4 text-2xl">At a glance</h2>
+  <h2 class="dark:text-secondary mb-4 text-2xl">At a Glance</h2>
   <Table className="mb-12">
-    <TableHeader className="text-secondary">
+    <TableHeader>
       <TableRow>
         <TableHead />
-        <TableHead>Dobby</TableHead>
-        <TableHead>Pickle</TableHead>
-        <TableHead>Sprout</TableHead>
+        <TableHead className="dark:text-secondary">Dobby</TableHead>
+        <TableHead className="dark:text-secondary">Pickle</TableHead>
+        <TableHead className="dark:text-secondary">Sprout</TableHead>
       </TableRow>
     </TableHeader>
     <TableBody>
       <TableRow>
-        <TableCell className="text-secondary">
+        <TableCell className="dark:text-secondary">
           <strong>Feeding</strong>
         </TableCell>
         <TableCell className="whitespace-normal">
@@ -44,7 +44,7 @@ import { cn } from "@/lib/utils"
         </TableCell>
       </TableRow>
       <TableRow>
-        <TableCell className="text-secondary">
+        <TableCell className="dark:text-secondary">
           <strong>Water</strong>
         </TableCell>
         <TableCell className="text-center" colSpan={3}>
@@ -52,15 +52,15 @@ import { cn } from "@/lib/utils"
         </TableCell>
       </TableRow>
       <TableRow>
-        <TableCell className="text-secondary">
+        <TableCell className="dark:text-secondary">
           <strong>Treats</strong>
         </TableCell>
         <TableCell>1 Rich Tea</TableCell>
-        <TableCell>4-5 Tasty Minis</TableCell>
         <TableCell>5-6 Dreamies</TableCell>
+        <TableCell>4-5 Tasty Minis</TableCell>
       </TableRow>
       <TableRow>
-        <TableCell className="text-secondary">
+        <TableCell className="dark:text-secondary">
           <strong>Medication</strong>
         </TableCell>
         <TableCell className="whitespace-normal">
@@ -73,7 +73,7 @@ import { cn } from "@/lib/utils"
         <TableCell>❌</TableCell>
       </TableRow>
       <TableRow>
-        <TableCell className="text-secondary">
+        <TableCell className="dark:text-secondary">
           <strong>Litter box</strong>
         </TableCell>
         <TableCell>❌</TableCell>
@@ -82,8 +82,8 @@ import { cn } from "@/lib/utils"
       </TableRow>
     </TableBody>
   </Table>
-  <h2 class="text-secondary mb-4 text-2xl">By Pet</h2>
-  <div class="mb-12 flex gap-4">
+  <h2 class="dark:text-secondary mb-4 text-2xl">By Pet</h2>
+  <div class="mb-12 flex flex-col gap-4 sm:flex-row">
     {
       ["Dobby", "Pickle", "Sprout"].map((pet) => (
         <a
@@ -95,10 +95,10 @@ import { cn } from "@/lib/utils"
       ))
     }
   </div>
-  <h2 class="text-secondary mb-4 text-2xl">Vets</h2>
+  <h2 class="dark:text-secondary mb-4 text-2xl">Vets</h2>
   <div class="mb-12 flex">
     <div class="flex-1">
-      <h3 class="text-secondary space-y-2 text-xl">Regular</h3>
+      <h3 class="dark:text-secondary space-y-2 text-xl">Regular</h3>
       <ul>
         <li>
           <a
@@ -119,7 +119,7 @@ import { cn } from "@/lib/utils"
       </ul>
     </div>
     <div class="flex-1">
-      <h3 class="text-secondary space-y-2 text-xl">Emergency</h3>
+      <h3 class="dark:text-secondary space-y-2 text-xl">Emergency</h3>
       <ul>
         <li>
           <a

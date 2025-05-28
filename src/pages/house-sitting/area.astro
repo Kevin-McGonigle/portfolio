@@ -11,14 +11,14 @@ import Layout from "@/layouts/breadcrumbed.astro"
 ---
 
 <Layout base="/house-sitting" title="Area">
-  <h1 class="text-secondary mb-16 text-4xl">Area</h1>
-  <h2 class="text-secondary mb-4 text-2xl">Shops</h2>
+  <h1 class="dark:text-secondary mb-16 text-4xl">Area</h1>
+  <h2 class="dark:text-secondary mb-4 text-2xl">Shops</h2>
   <Table className="mb-12">
-    <TableHeader className="text-secondary">
+    <TableHeader>
       <TableRow>
-        <TableHead>Shop</TableHead>
-        <TableHead>Size</TableHead>
-        <TableHead className="text-center whitespace-normal"
+        <TableHead className="dark:text-secondary">Shop</TableHead>
+        <TableHead className="dark:text-secondary">Size</TableHead>
+        <TableHead className="dark:text-secondary text-center whitespace-normal"
           >Minutes away (walking)</TableHead
         >
         <TableHead className="text-center whitespace-normal">
@@ -127,16 +127,18 @@ import Layout from "@/layouts/breadcrumbed.astro"
       </TableRow>
     </TableBody>
   </Table>
-  <h2 class="text-secondary mb-4 text-2xl">Restaurants</h2>
-  <h3 class="text-secondary mb-4 text-xl">Dine-in</h3>
+  <h2 class="dark:text-secondary mb-4 text-2xl">Restaurants</h2>
+  <h3 class="dark:text-secondary mb-4 text-xl">Dine-in</h3>
   <Table className="mb-12">
-    <TableHeader className="text-secondary">
+    <TableHeader>
       <TableRow>
-        <TableHead>Restaurant</TableHead>
-        <TableHead>Cuisine</TableHead>
-        <TableHead>Price</TableHead>
-        <TableHead className="text-center">Minutes away (walking)</TableHead>
-        <TableHead className="text-center">
+        <TableHead className="dark:text-secondary">Restaurant</TableHead>
+        <TableHead className="dark:text-secondary">Cuisine</TableHead>
+        <TableHead className="dark:text-secondary">Price</TableHead>
+        <TableHead className="dark:text-secondary text-center">
+          Minutes away (walking)
+        </TableHead>
+        <TableHead className="dark:text-secondary text-center">
           Minutes away (public transport)
         </TableHead>
       </TableRow>
@@ -234,12 +236,12 @@ import Layout from "@/layouts/breadcrumbed.astro"
       </TableRow>
     </TableBody>
   </Table>
-  <h3 class="text-secondary mb-4 text-xl">Takeaway</h3>
+  <h3 class="dark:text-secondary mb-4 text-xl">Takeaway</h3>
   <Table>
-    <TableHeader className="text-secondary">
+    <TableHeader>
       <TableRow>
-        <TableHead>Restaurant</TableHead>
-        <TableHead>Cuisine</TableHead>
+        <TableHead className="dark:text-secondary">Restaurant</TableHead>
+        <TableHead className="dark:text-secondary">Cuisine</TableHead>
       </TableRow>
     </TableHeader>
     <TableBody>
