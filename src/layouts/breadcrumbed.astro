@@ -1,3 +1,17 @@
 ---
 import Layout from "@/layouts/base.astro"
+import Breadcrumb from "@/components/breadcrumb.astro"
+
+type Props = {
+  title: string
+  description?: string
+  base?: string
+}
+
+const { title, description, base } = Astro.props
 ---
+
+<Layout title={title} description={description}>
+  <Breadcrumb base={base} className="mb-8" />
+  <slot />
+</Layout>
