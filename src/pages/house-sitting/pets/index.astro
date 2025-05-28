@@ -14,11 +14,11 @@ import { cn } from "@/lib/utils"
 
 <Layout base="/house-sitting" title="Pets">
   <h1 class="dark:text-secondary mb-16 text-4xl">Pets</h1>
-  <p class="mb-8">
+  <p class="mb-12">
     Here's a breakdown of everything you need to know about the kiddos.
   </p>
   <h2 class="dark:text-secondary mb-4 text-2xl">At a Glance</h2>
-  <Table className="mb-12">
+  <Table>
     <TableHeader>
       <TableRow>
         <TableHead />
@@ -82,7 +82,7 @@ import { cn } from "@/lib/utils"
       </TableRow>
     </TableBody>
   </Table>
-  <h2 class="dark:text-secondary mb-4 text-2xl">By Pet</h2>
+  <h2 class="dark:text-secondary mt-12 mb-4 text-2xl">By Pet</h2>
   <div class="mb-12 flex flex-col gap-4 sm:flex-row">
     {
       ["Dobby", "Pickle", "Sprout"].map((pet) => (
@@ -96,7 +96,7 @@ import { cn } from "@/lib/utils"
     }
   </div>
   <h2 class="dark:text-secondary mb-4 text-2xl">Vets</h2>
-  <div class="mb-12 flex">
+  <div class="flex">
     <div class="flex-1">
       <h3 class="dark:text-secondary space-y-2 text-xl">Regular</h3>
       <ul>
