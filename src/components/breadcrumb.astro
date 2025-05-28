@@ -32,7 +32,7 @@ const page = crumbs.pop() || "home"
         <>
           <BreadcrumbItem>
             <BreadcrumbLink
-              className="capitalize hover:text-secondary transition-colors duration-300 ease-in-out"
+              className="capitalize hover:text-secondary focus:text-secondary transition-colors duration-300 ease-in-out"
               href={crumb ? `${base ?? ""}/${crumb}` : base}
             >
               {crumb.replace(/-/g, " ") || "home"}
