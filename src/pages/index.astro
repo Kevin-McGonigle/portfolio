@@ -1,9 +1,31 @@
 ---
+import Bluesky from "@/images/bluesky.svg"
+import GitHub from "@/images/github.svg"
+import Instagram from "@/images/instagram.svg"
+import LinkedIn from "@/images/linkedin.svg"
 import Layout from "@/layouts/base.astro"
 
 const experience = new Date().getFullYear() - 2019
 const title = "Kevin McGonigle"
 const description = `Professional builder of cool internet things for over ${experience} years. Recreational one for many more.`
+const socials = [
+  {
+    Icon: Bluesky,
+    url: "https://bsky.app/profile/kevmc.dev",
+  },
+  {
+    Icon: GitHub,
+    url: "https://github.com/kevin-mcgonigle",
+  },
+  {
+    Icon: Instagram,
+    url: "https://instagram.com/kevmcg98",
+  },
+  {
+    Icon: LinkedIn,
+    url: "https://www.linkedin.com/in/kevin-mcgonigle",
+  },
+]
 const jobs = [
   {
     company: "Microsoft",
@@ -54,8 +76,24 @@ const jobs = [
 ---
 
 <Layout title={title} description={`${title}. ${description}`}>
-  <div class="mb-12">
+  <div
+    class="mb-12 flex flex-col-reverse items-center justify-between gap-8 sm:flex-row"
+  >
     <h1 class="dark:text-secondary text-3xl">{title}</h1>
+    <div class="flex w-full justify-evenly gap-6 sm:w-auto">
+      {
+        socials.map(({ Icon, url }) => (
+          <a
+            class="hover:text-secondary focus:text-secondary transition-colors duration-300 ease-in-out"
+            href={url}
+            rel="noopener"
+            target="_blank"
+          >
+            <Icon class="size-4" />
+          </a>
+        ))
+      }
+    </div>
   </div>
   <div class="mb-16 space-y-4">
     <p>
