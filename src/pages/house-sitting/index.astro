@@ -1,0 +1,152 @@
+---
+import Layout from "@/layouts/breadcrumbed.astro"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+import { ADDRESS, ADDRESS_MAP_URL } from "astro:env/client"
+---
+
+<Layout base="/house-sitting" title="House Sitting">
+  <h1 class="dark:text-secondary mb-16 text-4xl">Welcome to London, Dody!</h1>
+  <p class="mb-4">
+    We've written this handy guide with all the helpful information we could
+    come up with to help you in your temporary zoo-keeping roles.
+  </p>
+  <p class="mb-12">
+    If you have any questions or concerns, don't hesitate to message or call
+    either of us. Please keep us posted (ideally with plenty of photos!) on how
+    you're all getting on ❤️.
+  </p>
+  <h2 class="dark:text-secondary mb-4 text-2xl">Information</h2>
+  <div class="mb-12 flex flex-col gap-4 sm:flex-row">
+    <a
+      class={cn(buttonVariants({ variant: "default" }), "flex-1")}
+      href="/house-sitting/area"
+    >
+      Area
+    </a><a
+      class={cn(buttonVariants({ variant: "default" }), "flex-1")}
+      href="/house-sitting/flat"
+    >
+      Flat
+    </a>
+    <a
+      class={cn(buttonVariants({ variant: "default" }), "flex-1")}
+      href="/house-sitting/pets"
+    >
+      Pets
+    </a>
+  </div>
+  <h2 class="dark:text-secondary mb-4 text-2xl">At a Glance</h2>
+  <h3 class="dark:text-secondary mb-4 text-xl">Pets</h3>
+  <Table>
+    <TableHeader>
+      <TableRow>
+        <TableHead />
+        <TableHead className="dark:text-secondary">Pickle</TableHead>
+        <TableHead className="dark:text-secondary">Sprout</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell className="dark:text-secondary">
+          <strong>Feeding</strong>
+        </TableCell>
+        <TableCell> ⅔ scoop of kibble, once a day</TableCell>
+        <TableCell className="whitespace-normal">
+          60g kibble, twice a day
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell className="dark:text-secondary">
+          <strong>Water</strong>
+        </TableCell>
+        <TableCell className="text-center" colSpan={2}>
+          Water bowls in sitting room and bedroom
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell className="dark:text-secondary">
+          <strong>Treats</strong>
+        </TableCell>
+        <TableCell>5-6 Dreamies</TableCell>
+        <TableCell>4-5 Tasty Minis</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell className="dark:text-secondary">
+          <strong>Litter box</strong>
+        </TableCell>
+        <TableCell>Empty twice a day</TableCell>
+        <TableCell>❌</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+  <h3 class="dark:text-secondary mt-12 mb-4 text-xl">Address</h3>
+  <p class="mb-12">
+    <a
+      class="hover:text-secondary focus:text-secondary transition-colors duration-300 ease-in-out"
+      href={ADDRESS_MAP_URL}
+      target="_blank"
+    >
+      {ADDRESS}
+    </a>
+  </p>
+  <h3 class="dark:text-secondary mb-4 text-xl">Access</h3>
+  <Table>
+    <TableHeader>
+      <TableRow>
+        <TableHead className="dark:text-secondary">Front Gate</TableHead>
+        <TableHead className="dark:text-secondary">Building Entrance</TableHead>
+        <TableHead className="dark:text-secondary">Flat</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell className="text-center" colSpan={2}>
+          Round grey & blue fob
+        </TableCell>
+        <TableCell>Round silver key</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+  <h3 class="dark:text-secondary mt-12 mb-4 text-xl">Contacts</h3>
+  <Table>
+    <TableHeader>
+      <TableRow>
+        <TableHead className="dark:text-secondary">Contact</TableHead>
+        <TableHead className="dark:text-secondary">Number</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell>Vet</TableCell>
+        <TableCell>
+          <a
+            class="hover:text-secondary focus:text-secondary transition-colors duration-300 ease-in-out"
+            href="tel:02089815535"
+          >
+            020 8981 5535
+          </a>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>Emergency Vet</TableCell>
+        <TableCell>
+          <a
+            class="hover:text-secondary focus:text-secondary transition-colors duration-300 ease-in-out"
+            href="tel:02089897744"
+          >
+            020 8989 7744
+          </a>
+        </TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+</Layout>

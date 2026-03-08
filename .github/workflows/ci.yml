@@ -44,6 +44,10 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    env:
+      ADDRESS: ${{ secrets.ADDRESS }}
+      ADDRESS_MAP_URL: ${{ secrets.ADDRESS_MAP_URL }}
+      SPARE_KEY_LOCATION: ${{ secrets.SPARE_KEY_LOCATION }}
     steps:
       - uses: actions/checkout@v6
 
