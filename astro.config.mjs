@@ -11,6 +11,7 @@ export default defineConfig({
     schema: {
       ADDRESS: envField.string({ context: "client", access: "public" }),
       ADDRESS_MAP_URL: envField.string({ context: "client", access: "public" }),
+      HOUSE_SITTER: envField.string({ context: "client", access: "public" }),
       SPARE_KEY_LOCATION: envField.string({
         context: "client",
         access: "public",

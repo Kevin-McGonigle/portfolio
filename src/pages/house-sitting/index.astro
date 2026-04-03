@@ -10,11 +10,13 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { ADDRESS, ADDRESS_MAP_URL } from "astro:env/client"
+import { ADDRESS, ADDRESS_MAP_URL, HOUSE_SITTER } from "astro:env/client"
 ---
 
 <Layout base="/house-sitting" title="House Sitting">
-  <h1 class="dark:text-secondary mb-16 text-4xl">Welcome to London, Dody!</h1>
+  <h1 class="dark:text-secondary mb-16 text-4xl">
+    Welcome to London, {HOUSE_SITTER}!
+  </h1>
   <p class="mb-4">
     We've written this handy guide with all the helpful information we could
     come up with to help you in your temporary zoo-keeping roles.

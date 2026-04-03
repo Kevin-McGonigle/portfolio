@@ -47,6 +47,7 @@ jobs:
     env:
       ADDRESS: ${{ secrets.ADDRESS }}
       ADDRESS_MAP_URL: ${{ secrets.ADDRESS_MAP_URL }}
+      HOUSE_SITTER: ${{ secrets.HOUSE_SITTER }}
       SPARE_KEY_LOCATION: ${{ secrets.SPARE_KEY_LOCATION }}
     steps:
       - uses: actions/checkout@v6
